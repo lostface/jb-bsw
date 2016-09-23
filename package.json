@@ -1,0 +1,12 @@
+{
+  "name": "bswtst",
+  "version": "0.0.1",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zoltan Feher",
+
+  "engines": {
+    "node" : ">=4.0.0"
+  }
+}
