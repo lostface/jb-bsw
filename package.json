@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "angular": "^1.5.8",
-    "ramda": "^0.22.1"
+    "ramda": "^0.22.1",
+    "source-map-loader": "^0.1.5"
   }
 }
