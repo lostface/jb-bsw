@@ -9,6 +9,7 @@
     "node": ">=4.0.0"
   },
   "devDependencies": {
-    "angular": "^1.5.8"
+    "angular": "^1.5.8",
+    "ramda": "^0.22.1"
   }
 }
