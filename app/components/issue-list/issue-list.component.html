@@ -1,0 +1,18 @@
+<div>
+  <p>Issue List</p>
+
+  <ul>
+    <li ng-repeat="issue in $ctrl.issues track by issue.id" >
+      <issue-card
+        number={{::issue.number}}
+        title={{::issue.title}}
+        html-url={{::issue.htmlUrl}}
+        labels={{::issue.labels}}
+        state={{::issue.state}}
+        comments={{::issue.comments}}
+        created-at={{::issue.createdAt}}
+        user-login={{::issue.userLogin}}
+      ></issue-card>
+    </li>
+  </ul>
+</div>
