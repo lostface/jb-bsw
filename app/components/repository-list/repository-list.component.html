@@ -1,7 +1,7 @@
-<div>
+<div id="repository-list-container">
   <p>Repo List</p>
 
-  <ul>
+  <ul id="repository-list">
     <li ng-repeat="repository in $ctrl.repositories track by repository.id" >
       <repository-card
         id={{::repository.id}}

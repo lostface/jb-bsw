@@ -1,7 +1,7 @@
-<div>
+<div id="issue-list-container">
   <p>Issue List</p>
 
-  <ul>
+  <ul id="issue-list">
     <li ng-repeat="issue in $ctrl.issues track by issue.id" >
       <issue-card
         id={{::issue.id}}
