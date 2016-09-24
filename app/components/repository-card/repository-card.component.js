@@ -2,7 +2,6 @@ import template from './repository-card.component.html';
 
 export default {
   template,
-  controller: RepositoryCardController,
   bindings: {
     id: '@',
     name: '@',
@@ -16,7 +15,3 @@ export default {
     openIssuesCount: '@',
   },
 };
-
-function RepositoryCardController() {
-
-}
