@@ -4,7 +4,16 @@ export default {
   template,
   controller: RepositoryCardController,
   bindings: {
-
+    id: '@',
+    name: '@',
+    fullName: '@',
+    htmlUrl: '@',
+    description: '@',
+    stargazersCount: '@',
+    watchersCount: '@',
+    language: '@',
+    forksCount: '@',
+    openIssuesCount: '@',
   },
 };
 
