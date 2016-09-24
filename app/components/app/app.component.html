@@ -1,9 +1,5 @@
 <div id="app-container">
   <p>App</p>
   <search-panel></search-panel>
-  <content
-    repositories="$ctrl.repositories"
-    selected-repo-full-name="{{::$ctrl.selectedRepo.fullName}}"
-    selected-repo-issues="$ctrl.selectedRepoIssues"
-    on-repository-click="$ctrl.handleOnRepositoryClick(repositoryId)"></content>
+  <content repositories="$ctrl.repositories"></content>
 </div>

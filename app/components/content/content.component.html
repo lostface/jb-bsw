@@ -3,9 +3,9 @@
 
   <repository-list
     repositories="$ctrl.repositories"
-    on-repository-click="$ctrl.onRepositoryClick({ repositoryId })"></repository-list>
+    on-repository-click="$ctrl.handleOnRepositoryClick(repositoryId)"></repository-list>
 
   <issue-list
-    repo-full-name="{{::$ctrl.selectedRepoFullName}}"
+    repo-full-name="{{::$ctrl.selectedRepo.fullName}}"
     issues="$ctrl.selectedRepoIssues"></issue-list>
 </div>
