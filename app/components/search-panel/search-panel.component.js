@@ -5,8 +5,17 @@ class SearchPanelController {
     this.query = '';
   }
 
+  isQueryEmpty() {
+    return this.query === '';
+  }
+
   handleOnSearchButtonClick() {
     this.onSearchButtonClick({ query: this.query });
+  }
+
+  handleOnClearButtonClick() {
+    this.query = '';
+    this.onClearButtonClick();
   }
 }
 
@@ -15,5 +24,6 @@ export default {
   controller: SearchPanelController,
   bindings: {
     onSearchButtonClick: '&',
+    onClearButtonClick: '&',
   },
 };

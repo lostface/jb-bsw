@@ -14,6 +14,11 @@ class AppController {
     // TODO
 
   }
+
+  handleOnClearButtonClick() {
+    // initiate an "empty" search
+    this.handleOnSearchButtonClick('');
+  }
 }
 
 export default {

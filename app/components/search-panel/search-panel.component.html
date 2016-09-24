@@ -8,7 +8,10 @@
     placeholder="repository"
     maxlength="60" />
 
+  <button id="search-button" ng-click="$ctrl.handleOnSearchButtonClick()">Search</button>
+
   <button
-      id="search-button"
-      ng-click="$ctrl.handleOnSearchButtonClick()">Search</button>
+    id="clear-button"
+    ng-click="$ctrl.handleOnClearButtonClick()"
+    ng-disabled="$ctrl.isQueryEmpty()">Clear</button>
 </div>

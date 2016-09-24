@@ -1,5 +1,9 @@
 <div id="app-container">
   <p>App</p>
-  <search-panel on-search-button-click="$ctrl.handleOnSearchButtonClick(query)"></search-panel>
+
+  <search-panel
+    on-search-button-click="$ctrl.handleOnSearchButtonClick(query)"
+    on-clear-button-click="$ctrl.handleOnClearButtonClick()"></search-panel>
+
   <content repositories="$ctrl.repositories"></content>
 </div>
