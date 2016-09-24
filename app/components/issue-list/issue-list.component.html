@@ -1,5 +1,6 @@
 <div id="issue-list-container">
   <p>Issue List</p>
+  <p>Repo {{::$ctrl.repoFullName}}</p>
 
   <ul id="issue-list">
     <li ng-repeat="issue in $ctrl.issues track by issue.id" >

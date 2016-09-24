@@ -4,6 +4,7 @@ export default {
   template,
   bindings: {
     repositories: '<',
-    issues: '<',
+    selectedRepoFullName: '@',
+    selectedRepoIssues: '<',
   },
 };

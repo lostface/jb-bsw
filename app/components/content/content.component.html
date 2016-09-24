@@ -1,5 +1,9 @@
 <div id="content-container">
   <p>Content</p>
+
   <repository-list repositories="$ctrl.repositories"></repository-list>
-  <issue-list issues="$ctrl.issues"></issue-list>
+
+  <issue-list
+    repo-full-name="{{::$ctrl.selectedRepoFullName}}"
+    issues="$ctrl.selectedRepoIssues"></issue-list>
 </div>

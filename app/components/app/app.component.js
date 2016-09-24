@@ -10,7 +10,10 @@ class AppController {
     ];
 
     // TODO temporary data
-    this.issues = [
+    this.selectedRepo = null;
+
+    // TODO temporary data
+    this.selectedRepoIssues = [
       { id: '123', title: 'title 1' },
       { id: '456', title: 'title 2' },
       { id: '789', title: 'title 3' },
