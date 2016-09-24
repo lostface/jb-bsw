@@ -4,6 +4,7 @@
   <ul>
     <li ng-repeat="issue in $ctrl.issues track by issue.id" >
       <issue-card
+        id={{::issue.id}}
         number={{::issue.number}}
         title={{::issue.title}}
         html-url={{::issue.htmlUrl}}
