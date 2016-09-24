@@ -1,5 +1,14 @@
 <div id="search-panel-container">
   <p>Search</p>
-  <input id="search-query" type="text" maxlength="60" ng-trim="true" placeholder="repository" />
-  <button id="search-button" ng-click="$ctrl.handleOnSearchButtonClick()">Search</button>
+
+  <input
+    id="search-query"
+    type="text"
+    ng-model="$ctrl.query"
+    placeholder="repository"
+    maxlength="60" />
+
+  <button
+      id="search-button"
+      ng-click="$ctrl.handleOnSearchButtonClick()">Search</button>
 </div>
