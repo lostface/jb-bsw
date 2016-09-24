@@ -19,6 +19,11 @@ class AppController {
       { id: '789', title: 'title 3' },
     ];
   }
+
+  handleOnRepositoryClick(repositoryId) {
+    // TODO
+
+  }
 }
 
 export default {

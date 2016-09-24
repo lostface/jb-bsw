@@ -6,5 +6,6 @@ export default {
     repositories: '<',
     selectedRepoFullName: '@',
     selectedRepoIssues: '<',
+    onRepositoryClick: '&',
   },
 };

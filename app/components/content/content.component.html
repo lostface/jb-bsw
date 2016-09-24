@@ -1,7 +1,9 @@
 <div id="content-container">
   <p>Content</p>
 
-  <repository-list repositories="$ctrl.repositories"></repository-list>
+  <repository-list
+    repositories="$ctrl.repositories"
+    on-repository-click="$ctrl.onRepositoryClick({ repositoryId })"></repository-list>
 
   <issue-list
     repo-full-name="{{::$ctrl.selectedRepoFullName}}"
