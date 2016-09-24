@@ -33,7 +33,11 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel',
-      }
+      },
+      {
+        test: /\.html$/,
+        loader: 'raw'
+      },
     ],
 
     preLoaders: [
