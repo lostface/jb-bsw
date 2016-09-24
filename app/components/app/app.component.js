@@ -9,6 +9,11 @@ class AppController {
       { id: '789', name: 'repo 3' },
     ];
   }
+
+  handleOnSearchButtonClick(query) {
+    // TODO
+
+  }
 }
 
 export default {
