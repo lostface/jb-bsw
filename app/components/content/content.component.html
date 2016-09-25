@@ -6,6 +6,6 @@
     on-repository-click="$ctrl.handleOnRepositoryClick(repositoryId)"></repository-list>
 
   <issue-list
-    repo-full-name="{{::$ctrl.selectedRepo.fullName}}"
+    repo-full-name="$ctrl.selectedRepo.fullName"
     issues="$ctrl.selectedRepoIssues"></issue-list>
 </div>
