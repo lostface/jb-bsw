@@ -1,14 +1,16 @@
-<div id="repository-card-container" ng-click="$ctrl.handleOnClick()" >
+<div
+    id="repository-card-container-{{::$ctrl.repository.id}}"
+    ng-click="$ctrl.handleOnClick()" >
   <p>Repo Card</p>
   <p>
-    {{::$ctrl.name}}
-    {{::$ctrl.fullName}}
-    {{::$ctrl.htmlUrl}}
-    {{::$ctrl.description}}
-    {{::$ctrl.stargazersCount}}
-    {{::$ctrl.watchersCount}}
-    {{::$ctrl.language}}
-    {{::$ctrl.forksCount}}
-    {{::$ctrl.openIssuesCount}}
+    {{::$ctrl.repository.name}}
+    {{::$ctrl.repository.fullName}}
+    {{::$ctrl.repository.htmlUrl}}
+    {{::$ctrl.repository.description}}
+    {{::$ctrl.repository.stargazersCount}}
+    {{::$ctrl.repository.watchersCount}}
+    {{::$ctrl.repository.language}}
+    {{::$ctrl.repository.forksCount}}
+    {{::$ctrl.repository.openIssuesCount}}
   </p>
 </div>
