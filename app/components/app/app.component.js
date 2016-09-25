@@ -8,9 +8,11 @@ class AppController {
 
   $onInit() {
     this.repositories = [];
+    // initiate an "empty" search
+    this.searchRepositories('');
   }
 
-  handleOnSearchButtonClick(query) {
+  searchRepositories(query) {
     // small hack to allow "empty" search
     query = query ? query : 'size:>=0';
 
@@ -23,11 +25,6 @@ class AppController {
         console.error(err);
         this.repositories = [];
       });
-  }
-
-  handleOnClearButtonClick() {
-    // initiate an "empty" search
-    this.handleOnSearchButtonClick('');
   }
 }
 

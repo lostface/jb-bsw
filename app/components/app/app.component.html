@@ -2,8 +2,8 @@
   <p>App</p>
 
   <search-panel
-    on-search-button-click="$ctrl.handleOnSearchButtonClick(query)"
-    on-clear-button-click="$ctrl.handleOnClearButtonClick()"></search-panel>
+    on-search-button-click="$ctrl.searchRepository(query)"
+    on-clear-button-click="$ctrl.searchRepository('')"></search-panel>
 
   <content repositories="$ctrl.repositories"></content>
 </div>
