@@ -17,6 +17,13 @@ class SearchPanelController {
     this.query = '';
     this.onClearButtonClick();
   }
+
+  handleOnSearchQueryKeydown($event) {
+    // ESC
+    if ($event.keyCode === 27) {
+      this.query = '';
+    }
+  }
 }
 
 export default {

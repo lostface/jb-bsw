@@ -5,6 +5,7 @@
     id="search-query"
     type="text"
     ng-model="$ctrl.query"
+    ng-keydown="$ctrl.handleOnSearchQueryKeydown($event)"
     placeholder="repository"
     maxlength="60" />
 
