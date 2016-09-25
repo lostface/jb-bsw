@@ -32,13 +32,9 @@ function toIssue(rawIssue) {
     title: rawIssue.title,
     htmlUrl: rawIssue.html_url,
     userLogin: rawIssue.user_login,
-    labels: R.map(toLabel, rawIssue.labels),
+    labels: R.pluck('name', rawIssue.labels),
     state: rawIssue.state,
     comments: rawIssue.comments,
     createdAt: rawIssue.created_at,
   };
-}
-
-function toLabel(rawLabel) {
-  return rawLabel.name;
 }
