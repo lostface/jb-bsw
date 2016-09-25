@@ -1,7 +1,7 @@
 import R from 'ramda';
 
 // TODO extract to constants
-const URL_GITHUB_API = 'https://api.github.com/search/repositories';
+const URL_SEARCH_REPOSITORIES = 'https://api.github.com/search/repositories';
 
 export default repositorySearchService;
 
@@ -13,7 +13,7 @@ function repositorySearchService($http) {
   };
 
   function search(query) {
-    return $http.get(URL_GITHUB_API, {
+    return $http.get(URL_SEARCH_REPOSITORIES, {
       params: { q: query },
     })
       .then(response => response.data)
