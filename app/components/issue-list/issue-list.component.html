@@ -4,17 +4,7 @@
 
   <ul id="issue-list">
     <li ng-repeat="issue in $ctrl.issues track by issue.id" >
-      <issue-card
-        id=issue.id
-        number=issue.number
-        title=issue.title
-        html-url=issue.htmlUrl
-        labels=issue.labels
-        state=issue.state
-        comments=issue.comments
-        created-at=issue.createdAt
-        user-login=issue.userLogin
-      ></issue-card>
+      <issue-card issue="issue"</issue-card>
     </li>
   </ul>
 </div>
