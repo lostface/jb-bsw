@@ -31,7 +31,7 @@ function toIssue(rawIssue) {
     number: rawIssue.number,
     title: rawIssue.title,
     htmlUrl: rawIssue.html_url,
-    userLogin: rawIssue.user_login,
+    userLogin: rawIssue.user.login,
     labels: R.pluck('name', rawIssue.labels),
     state: rawIssue.state,
     comments: rawIssue.comments,
