@@ -32,7 +32,7 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        loader: 'babel',
+        loaders: ['ng-annotate', 'babel'],
       },
       {
         test: /\.html$/,
