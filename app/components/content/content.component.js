@@ -1,21 +1,33 @@
+import R from 'ramda';
 import template from './content.component.html';
 
 class ContentController {
-  $onInit() {
-    // TODO temporary data
-    this.selectedRepo = null;
+  constructor(issueSearchService) {
+    'ngInject';
+    this.issueSearchService = issueSearchService;
+  }
 
-    // TODO temporary data
-    this.selectedRepoIssues = [
-      { id: '123', title: 'title 1' },
-      { id: '456', title: 'title 2' },
-      { id: '789', title: 'title 3' },
-    ];
+  $onInit() {
+    this.selectedRepo = null;
+    this.selectedRepoIssues = [];
   }
 
   handleOnRepositoryClick(repositoryId) {
-    // TODO
-    console.log('heyo', repositoryId)
+    // TODO more FP-ish
+    const findRepoByRepositoryId = R.find(repository => repository.id === repositoryId);
+    const repo = findRepoByRepositoryId(this.repositories);
+
+    this.selectedRepo = repo;
+
+    this.issueSearchService.searchByRepoFullName(repo.fullName)
+      .then(issues => {
+        this.selectedRepoIssues = issues;
+      })
+      .catch(err => {
+        // TODO proper error handling
+        console.error(err);
+        this.selectedRepoIssues = [];
+      });
   }
 }
 
