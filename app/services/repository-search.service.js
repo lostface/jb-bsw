@@ -3,9 +3,9 @@ import R from 'ramda';
 // TODO extract to constants
 const URL_GITHUB_API = 'https://api.github.com/search/repositories';
 
-export default RepositorySearchService;
+export default repositorySearchService;
 
-function RepositorySearchService($http) {
+function repositorySearchService($http) {
   'ngInject';
 
   return {
