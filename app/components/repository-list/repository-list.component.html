@@ -4,16 +4,16 @@
   <ul id="repository-list">
     <li ng-repeat="repository in $ctrl.repositories track by repository.id" >
       <repository-card
-        id={{::repository.id}}
-        name={{::repository.name}}
-        full-name={{::repository.fullName}}
-        html-url={{::repository.htmlUrl}}
-        description={{::repository.description}}
-        stargazers-count={{::repository.stargazersCount}}
-        watchers-count={{::repository.watchersCount}}
-        language={{::repository.language}}
-        forks-count={{::repository.forksCount}}
-        open-issues-count={{::repository.openIssuesCount}}
+        id=repository.id
+        name=repository.name
+        full-name=repository.fullName
+        html-url=repository.htmlUrl
+        description=repository.description
+        stargazers-count=repository.stargazersCount
+        watchers-count=repository.watchersCount
+        language=repository.language
+        forks-count=repository.forksCount
+        open-issues-count=repository.openIssuesCount
         on-click="$ctrl.onRepositoryClick({ repositoryId })"
       ></repository-card>
     </li>
