@@ -2,12 +2,20 @@ import R from 'ramda';
 import template from './content.component.html';
 
 class ContentController {
-  constructor(issueSearchService) {
+  constructor(issueSearchService, $scope) {
     'ngInject';
     this.issueSearchService = issueSearchService;
+
+    $scope.$watch('$ctrl.repositories', () => {
+      this.resetSelectedProps();
+    });
   }
 
   $onInit() {
+    this.resetSelectedProps();
+  }
+
+  resetSelectedProps() {
     this.selectedRepo = null;
     this.selectedRepoIssues = [];
   }
