@@ -17,6 +17,7 @@ module.exports = {
   ],
   "rules": {
     // Possible Errors
+    "no-console": "off",
     "no-template-curly-in-string": "error",
     "no-unsafe-negation": "error",
 
