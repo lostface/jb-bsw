@@ -1,18 +1,28 @@
 import template from './app.component.html';
 
 class AppController {
+  constructor(repositorySearchService) {
+    'ngInject';
+    this.repositorySearchService = repositorySearchService;
+  }
+
   $onInit() {
-    // TODO temporary data
-    this.repositories = [
-      { id: '123', name: 'repo 1' },
-      { id: '456', name: 'repo 2' },
-      { id: '789', name: 'repo 3' },
-    ];
+    this.repositories = [];
   }
 
   handleOnSearchButtonClick(query) {
-    // TODO
+    // small hack to allow "empty" search
+    query = query ? query : 'size:>=0';
 
+    this.repositorySearchService.search(query)
+      .then(repositories => {
+        this.repositories = repositories;
+      })
+      .catch(err => {
+        // TODO proper error handling
+        console.error(err);
+        this.repositories = [];
+      });
   }
 
   handleOnClearButtonClick() {
