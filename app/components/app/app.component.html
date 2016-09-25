@@ -2,7 +2,7 @@
   <p>App</p>
 
   <search-panel
-    on-search-button-click="$ctrl.searchRepositories(query)"
+    on-search-trigger="$ctrl.searchRepositories(query)"
     on-clear-button-click="$ctrl.searchRepositories('')"></search-panel>
 
   <content repositories="$ctrl.repositories"></content>

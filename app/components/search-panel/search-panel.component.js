@@ -2,26 +2,34 @@ import template from './search-panel.component.html';
 
 class SearchPanelController {
   $onInit() {
-    this.query = '';
+    this.resetQuery();
   }
 
   isQueryEmpty() {
     return this.query === '';
   }
 
-  handleOnSearchButtonClick() {
-    this.onSearchButtonClick({ query: this.query });
+  resetQuery() {
+    this.query = '';
+  }
+
+  triggerSearch() {
+    this.onSearchTrigger({ query: this.query });
   }
 
   handleOnClearButtonClick() {
-    this.query = '';
+    this.resetQuery();
     this.onClearButtonClick();
   }
 
   handleOnSearchQueryKeydown($event) {
+    const { keyCode } = $event;
     // ESC
-    if ($event.keyCode === 27) {
-      this.query = '';
+    if (keyCode === 27) {
+      this.resetQuery();
+    // Enter
+    } else if (keyCode === 13) {
+      this.triggerSearch();
     }
   }
 }
@@ -30,7 +38,7 @@ export default {
   template,
   controller: SearchPanelController,
   bindings: {
-    onSearchButtonClick: '&',
+    onSearchTrigger: '&',
     onClearButtonClick: '&',
   },
 };
