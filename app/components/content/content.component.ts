@@ -12,7 +12,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
       ></repository-list>
 
       <issue-list
-        [repoFullName]="selectedRepo.fullName"
+        [repoFullName]="selectedRepo?.fullName"
         [issues]="selectedRepoIssues"
       ></issue-list>
     </div>
@@ -23,5 +23,5 @@ export default class ContentComponent {
   @Input() public repositories: any[];
   @Input() public selectedRepo: any;
   @Input() public selectedRepoIssues: any[];
-  @Output() public repositoryClick: EventEmitter<number> = new EventEmitter();
+  @Output() public repositoryClick = new EventEmitter<number>();
 }
