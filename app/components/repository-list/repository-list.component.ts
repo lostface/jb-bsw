@@ -22,6 +22,7 @@ export default class RepositoryListComponent {
   @Input() public repositories: any[];
   @Output() public repositoryClick: EventEmitter<number> = new EventEmitter();
 
+  // TODO duplicate: trackById(index: number, obj: { id })
   trackById(index: number, repository): void {
     return repository.id;
   }
