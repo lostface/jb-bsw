@@ -3,15 +3,14 @@ import R from 'ramda';
 // TODO extract to constants
 const URL_SEARCH_ISSUES = 'https://api.github.com/search/issues';
 
-export default function issueSearchService($http) {
-  'ngInject';
+export default class IssueSearchService {
+  constructor($http) {
+    'ngInject';
+    this.$http = $http;
+  }
 
-  return {
-    search,
-    searchByRepoFullName,
-  };
-
-  function search(query) {
+  search(query) {
+    const { $http } = this;
     return $http.get(URL_SEARCH_ISSUES, {
       params: { q: query },
     })
@@ -20,8 +19,8 @@ export default function issueSearchService($http) {
       .then(R.map(toIssue));
   }
 
-  function searchByRepoFullName(repoFullName) {
-    return search(`repo:${repoFullName}`);
+  searchByRepoFullName(repoFullName) {
+    return this.search(`repo:${repoFullName}`);
   }
 }
 

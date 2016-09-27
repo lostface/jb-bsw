@@ -3,14 +3,14 @@ import R from 'ramda';
 // TODO extract to constants
 const URL_SEARCH_REPOSITORIES = 'https://api.github.com/search/repositories';
 
-export default function repositorySearchService($http) {
-  'ngInject';
+export default class RepositorySearchService {
+  constructor($http) {
+    'ngInject';
+    this.$http = $http;
+  }
 
-  return {
-    search
-  };
-
-  function search(query) {
+  search(query) {
+    const { $http } = this;
     return $http.get(URL_SEARCH_REPOSITORIES, {
       params: { q: query },
     })

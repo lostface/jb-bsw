@@ -1,6 +1,6 @@
 import angular from 'angular';
-import issueSearchService from './services/issue-search.service';
-import repositorySearchService from './services/repository-search.service';
+import IssueSearchService from './services/issue-search.service';
+import RepositorySearchService from './services/repository-search.service';
 import appComponent from './components/app/app.component';
 import contentComponent from './components/content/content.component';
 import issueCardComponent from './components/issue-card/issue-card.component';
@@ -10,8 +10,8 @@ import repositoryListComponent from './components/repository-list/repository-lis
 import searchPanelComponent from './components/search-panel/search-panel.component';
 
 export default angular.module('app', [])
-  .factory('issueSearchService', issueSearchService)
-  .factory('repositorySearchService', repositorySearchService)
+  .service('issueSearchService', IssueSearchService)
+  .service('repositorySearchService', RepositorySearchService)
   .component('app', appComponent)
   .component('content', contentComponent)
   .component('issueCard', issueCardComponent)
