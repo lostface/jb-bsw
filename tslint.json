@@ -1,0 +1,25 @@
+//
+{
+  "extends": "tslint:latest",
+  "rules": {
+    // temporary overrides
+    "no-console": [false],
+
+    "interface-name": [true, "never-prefix"],
+    "max-line-length": [true, 160],
+    "member-access": false,
+    "no-any": true,
+    "no-consecutive-blank-lines": false,
+    "no-require-imports": true,
+    "no-shadowed-variable": false,
+    "object-literal-sort-keys": false,
+    "one-variable-per-declaration": [false, "ignore-for-loop"],
+    "only-arrow-functions": [false, "allow-declarations"],
+    "ordered-imports": false,
+    "quotemark": [true, "single", "jsx-double"],
+    // "restrict-plus-operands": true,
+    "triple-equals": false,
+    "typedef": [true, "call-signature", "parameter", "property-declaration", "member-variable-declaration"],
+    "use-strict": [true, "check-module"]
+  }
+}
