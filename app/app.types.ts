@@ -13,3 +13,18 @@ export interface Repository {
   forksCount: number;
   openIssuesCount: number;
 }
+
+// TODO Issue.Id would be possible?
+export type IssueId = number;
+
+export interface Issue {
+  id: IssueId;
+  number: number;
+  title: string;
+  htmlUrl: string;
+  userLogin: string;
+  labels: string[];
+  state: string;
+  comments: number;
+  createdAt: string;
+}

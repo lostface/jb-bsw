@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import RepositorySearchService from '../../services/repository-search.service';
 import IssueSearchService from '../../services/issue-search.service';
 import * as R from 'ramda';
-import { Repository } from '../../app.types';
+import { Repository, Issue } from '../../app.types';
 
 @Component({
   selector: 'app',
@@ -28,7 +28,7 @@ import { Repository } from '../../app.types';
 export default class AppComponent implements OnInit {
   public repositories: Repository[];
   public selectedRepo?: Repository;
-  public selectedRepoIssues?: any[];
+  public selectedRepoIssues?: Issue[];
 
   constructor(
     private issueSearchService: IssueSearchService,
@@ -73,7 +73,7 @@ export default class AppComponent implements OnInit {
   }
 
   searchIssuesByRepoFullName(repoFullName: string): void {
-    const setSelectedRepoIssues = issues => {
+    const setSelectedRepoIssues = (issues: Issue[]) => {
       this.selectedRepoIssues = issues;
     };
 

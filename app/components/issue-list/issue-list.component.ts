@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Issue, IssueId } from '../../app.types';
 
 @Component({
   selector: 'issue-list',
@@ -18,10 +19,10 @@ import { Component, Input } from '@angular/core';
 
 export default class IssueListComponent {
   @Input() public repoFullName: string;
-  @Input() public issues: any[];
+  @Input() public issues: Issue[];
 
   // TODO duplicate: trackById(index: number, obj: { id })
-  trackById(index: number, issue): void {
+  trackById(index: number, issue: Issue): IssueId {
     return issue.id;
   }
 }

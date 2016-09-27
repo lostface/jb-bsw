@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Issue } from '../../app.types';
 
 @Component({
   selector: 'issue-card',
@@ -20,5 +21,5 @@ import { Component, Input } from '@angular/core';
 })
 
 export default class IssueCardComponent {
-  @Input() public issue: any;
+  @Input() public issue: Issue;
 }

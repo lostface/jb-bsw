@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Repository, RepositoryId } from '../../app.types';
+import { Repository, RepositoryId, Issue } from '../../app.types';
 
 @Component({
   selector: 'content',
@@ -23,6 +23,6 @@ import { Repository, RepositoryId } from '../../app.types';
 export default class ContentComponent {
   @Input() public repositories: Repository[];
   @Input() public selectedRepo: Repository;
-  @Input() public selectedRepoIssues: any[];
+  @Input() public selectedRepoIssues: Issue[];
   @Output() public repositoryClick = new EventEmitter<RepositoryId>();
 }
