@@ -1,0 +1,29 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["es5", "es2015", "dom"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "dist",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "jsx": "react",
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": false,
+    "preserveConstEnums": true,
+    "removeComments": true,
+    "strictNullChecks": true
+    // "suppressImplicitAnyIndexErrors": true
+  },
+
+  "include": [
+    "app/**/*"
+  ],
+
+  "exclude": []
+}
