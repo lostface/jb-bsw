@@ -1,21 +1,21 @@
 import angular from 'angular';
 import IssueSearchService from './services/issue-search.service';
 import RepositorySearchService from './services/repository-search.service';
-import appComponent from './components/app/app.component';
-import contentComponent from './components/content/content.component';
-import issueCardComponent from './components/issue-card/issue-card.component';
-import issueListComponent from './components/issue-list/issue-list.component';
-import repositoryCardComponent from './components/repository-card/repository-card.component';
-import repositoryListComponent from './components/repository-list/repository-list.component';
-import searchPanelComponent from './components/search-panel/search-panel.component';
+import AppComponent from './components/app/app.component';
+import ContentComponent from './components/content/content.component';
+import IssueCardComponent from './components/issue-card/issue-card.component';
+import IssueListComponent from './components/issue-list/issue-list.component';
+import RepositoryCardComponent from './components/repository-card/repository-card.component';
+import RepositoryListComponent from './components/repository-list/repository-list.component';
+import SearchPanelComponent from './components/search-panel/search-panel.component';
 
 export default angular.module('app', [])
   .service('issueSearchService', IssueSearchService)
   .service('repositorySearchService', RepositorySearchService)
-  .component('app', appComponent)
-  .component('content', contentComponent)
-  .component('issueCard', issueCardComponent)
-  .component('issueList', issueListComponent)
-  .component('repositoryCard', repositoryCardComponent)
-  .component('repositoryList', repositoryListComponent)
-  .component('searchPanel', searchPanelComponent);
+  .component('app', AppComponent)
+  .component('content', ContentComponent)
+  .component('issueCard', IssueCardComponent)
+  .component('issueList', IssueListComponent)
+  .component('repositoryCard', RepositoryCardComponent)
+  .component('repositoryList', RepositoryListComponent)
+  .component('searchPanel', SearchPanelComponent);
