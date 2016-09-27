@@ -4,7 +4,7 @@ const outdir = './dist';
 
 module.exports = {
   entry: {
-    app: './app/bootstrap.js',
+    app: './app/main.ts',
     libs: ['ramda'],
   },
 
@@ -25,15 +25,14 @@ module.exports = {
   devtool: 'source-map',
 
   resolve: {
-    extensions: ['', '.webpack.js', '.web.js', '.js']
+    extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js']
   },
 
   module: {
     loaders: [
-      {
-        test: /\.html$/,
-        loader: 'raw'
-      },
+      // All files with a '.ts' or '.tsx' extension will be handled by 'ts-loader'.
+      { test: /\.tsx?$/, loader: 'ts-loader' },
+      { test: /\.html$/, loader: 'raw' },
     ],
 
     preLoaders: [
