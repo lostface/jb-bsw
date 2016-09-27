@@ -10,6 +10,8 @@ module.exports = {
       // '@angular/compiler',
       '@angular/core',
       // '@angular/http',
+      '@angular/platform-browser',
+      '@angular/platform-browser-dynamic',
       'reflect-metadata',
       // 'rxjs',
       'zone.js',
