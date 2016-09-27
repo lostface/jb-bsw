@@ -25,28 +25,38 @@ class AppController {
     // small hack to allow "empty" search
     query = query ? query : 'size:>=0';
 
+    const setRepositores = repositories => {
+      this.repositories = repositories;
+    };
+
+    const handleError = err => {
+      // TODO proper error handling
+      console.error(err);
+      setRepositores([]);
+    };
+
+    const resetSelectedProps = () => this.resetSelectedProps();
+
     this.repositorySearchService.search(query)
-      .then(repositories => {
-        this.repositories = repositories;
-      })
-      .catch(err => {
-        // TODO proper error handling
-        console.error(err);
-        this.repositories = [];
-      })
-      .finally(() => this.resetSelectedProps());
+      .then(setRepositores)
+      .catch(handleError)
+      .finally(resetSelectedProps);
   }
 
   searchIssuesByRepoFullName(repoFullName) {
+    const setSelectedRepoIssues = issues => {
+      this.selectedRepoIssues = issues;
+    };
+
+    const handleError = err => {
+      // TODO proper error handling
+      console.error(err);
+      setSelectedRepoIssues([]);
+    };
+
     this.issueSearchService.searchByRepoFullName(repoFullName)
-      .then(issues => {
-        this.selectedRepoIssues = issues;
-      })
-      .catch(err => {
-        // TODO proper error handling
-        console.error(err);
-        this.selectedRepoIssues = [];
-      });
+      .then(setSelectedRepoIssues)
+      .catch(handleError);
   }
 
   handleOnRepositoryClick(repositoryId) {
