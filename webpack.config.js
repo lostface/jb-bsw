@@ -5,7 +5,16 @@ const outdir = './dist';
 module.exports = {
   entry: {
     app: './app/main.ts',
-    libs: ['ramda'],
+    libs: [
+      // '@angular/common',
+      // '@angular/compiler',
+      '@angular/core',
+      // '@angular/http',
+      'reflect-metadata',
+      // 'rxjs',
+      'zone.js',
+      'ramda'
+    ],
   },
 
   output: {
