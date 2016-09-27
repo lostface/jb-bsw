@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Repository, RepositoryId } from '../../app.types';
 
 @Component({
   selector: 'repository-list',
@@ -19,11 +20,11 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 
 export default class RepositoryListComponent {
-  @Input() public repositories: any[];
-  @Output() public repositoryClick: EventEmitter<number> = new EventEmitter();
+  @Input() public repositories: Repository[];
+  @Output() public repositoryClick = new EventEmitter<RepositoryId>();
 
   // TODO duplicate: trackById(index: number, obj: { id })
-  trackById(index: number, repository): void {
+  trackById(index: number, repository: Repository): number {
     return repository.id;
   }
 }

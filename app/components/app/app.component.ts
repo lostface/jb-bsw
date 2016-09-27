@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import RepositorySearchService from '../../services/repository-search.service';
 import IssueSearchService from '../../services/issue-search.service';
 import * as R from 'ramda';
+import { Repository } from '../../app.types';
 
 @Component({
   selector: 'app',
@@ -25,9 +26,9 @@ import * as R from 'ramda';
 })
 
 export default class AppComponent implements OnInit {
-  public repositories: any[];
-  public selectedRepo: any;
-  public selectedRepoIssues: any[];
+  public repositories: Repository[];
+  public selectedRepo?: Repository;
+  public selectedRepoIssues?: any[];
 
   constructor(
     private issueSearchService: IssueSearchService,
@@ -43,7 +44,7 @@ export default class AppComponent implements OnInit {
   }
 
   resetSelectedProps(): void {
-    this.selectedRepo = null;
+    this.selectedRepo = undefined;
     this.selectedRepoIssues = [];
   }
 
@@ -51,11 +52,11 @@ export default class AppComponent implements OnInit {
     // small hack to allow "empty" search
     query = query ? query : 'size:>=0';
 
-    const setRepositores = repositories => {
+    const setRepositores = (repositories: Repository[]) => {
       this.repositories = repositories;
     };
 
-    const handleError = err => {
+    const handleError = (err: {}) => {
       // TODO proper error handling
       console.error(err);
       setRepositores([]);
@@ -76,7 +77,7 @@ export default class AppComponent implements OnInit {
       this.selectedRepoIssues = issues;
     };
 
-    const handleError = err => {
+    const handleError = (err: {}) => {
       // TODO proper error handling
       console.error(err);
       setSelectedRepoIssues([]);
@@ -91,7 +92,9 @@ export default class AppComponent implements OnInit {
 
   handleRepositoryClick(repositoryId: number): void {
     // TODO more FP-ish
-    const findRepoByRepositoryId = R.find(repository => repository.id === repositoryId);
+    const findRepoByRepositoryId = R.find(
+      (repository: Repository) => repository.id === repositoryId
+    );
     const repo = findRepoByRepositoryId(this.repositories);
 
     this.selectedRepo = repo;

@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Repository } from '../../app.types';
 
 @Component({
   selector: 'repository-card',
@@ -21,5 +22,5 @@ import { Component, Input } from '@angular/core';
 })
 
 export default class RepositoryCardComponent {
-  @Input() public repository: any;
+  @Input() public repository: Repository;
 }
