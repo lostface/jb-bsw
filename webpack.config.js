@@ -10,7 +10,7 @@ module.exports = {
       // '@angular/compiler',
       '@angular/core',
       '@angular/forms',
-      // '@angular/http',
+      '@angular/http',
       '@angular/platform-browser',
       '@angular/platform-browser-dynamic',
       'reflect-metadata',
