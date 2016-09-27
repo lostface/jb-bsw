@@ -14,7 +14,7 @@ module.exports = {
       '@angular/platform-browser',
       '@angular/platform-browser-dynamic',
       'reflect-metadata',
-      // 'rxjs',
+      'rxjs', // this is a bit harsh but god for now :) tree shaking would be nice here
       'zone.js',
       'ramda'
     ],
