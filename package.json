@@ -4,7 +4,6 @@
   "scripts": {
     "watch": "webpack --progress --colors --watch",
     "build": "webpack --progress --colors ",
-    "lint": "eslint . --ext .js --cache",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Zoltan Feher",
@@ -16,12 +15,9 @@
     "babel": "^6.5.2",
     "babel-cli": "^6.14.0",
     "babel-core": "^6.14.0",
-    "babel-eslint": "^6.1.2",
     "babel-loader": "^6.2.5",
     "babel-plugin-transform-object-rest-spread": "^6.8.0",
     "babel-preset-es2015": "^6.14.0",
-    "eslint": "^3.5.0",
-    "eslint-plugin-babel": "^3.3.0",
     "ng-annotate-loader": "^0.1.1",
     "ramda": "^0.22.1",
     "raw-loader": "^0.5.1",
