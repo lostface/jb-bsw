@@ -3,7 +3,7 @@
 
   <repository-list
     repositories="$ctrl.repositories"
-    on-repository-click="$ctrl.handleOnRepositoryClick(repositoryId)"></repository-list>
+    on-repository-click="$ctrl.onRepositoryClick({ repositoryId })"></repository-list>
 
   <issue-list
     repo-full-name="$ctrl.selectedRepo.fullName"
