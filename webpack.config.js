@@ -5,7 +5,7 @@ const outdir = './dist';
 module.exports = {
   entry: {
     app: './app/bootstrap.js',
-    libs: ['angular', 'ramda'],
+    libs: ['ramda'],
   },
 
   output: {
@@ -30,10 +30,6 @@ module.exports = {
 
   module: {
     loaders: [
-      {
-        test: /\.js$/,
-        loaders: 'ng-annotate',
-      },
       {
         test: /\.html$/,
         loader: 'raw'

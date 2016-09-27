@@ -11,8 +11,6 @@
     "node": ">=4.0.0"
   },
   "devDependencies": {
-    "angular": "^1.5.8",
-    "ng-annotate-loader": "^0.1.1",
     "ramda": "^0.22.1",
     "raw-loader": "^0.5.1",
     "source-map-loader": "^0.1.5",
