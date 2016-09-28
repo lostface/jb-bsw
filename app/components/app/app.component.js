@@ -3,10 +3,11 @@ import R from 'ramda';
 import template from './app.component.html';
 
 class AppController {
-  constructor(repositorySearchService, issueSearchService, $mdDialog) {
+  constructor(repositorySearchService, issueSearchService, $q, $mdDialog) {
     'ngInject';
     this.repositorySearchService = repositorySearchService;
     this.issueSearchService = issueSearchService;
+    this.$q = $q;
     this.$mdDialog = $mdDialog;
   }
 
@@ -36,6 +37,7 @@ class AppController {
       // TODO proper error handling
       console.error(err);
       setRepositores([]);
+      return this.$q.reject(err);
     };
 
     const resetSelectedProps = () => this.resetSelectedProps();
@@ -59,6 +61,7 @@ class AppController {
       // TODO proper error handling
       console.error(err);
       setSelectedRepoIssues([]);
+      return this.$q.reject(err);
     };
 
     const setLoadingFalse = () => { this.loading = false; };
