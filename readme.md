@@ -7,10 +7,8 @@ npm install
 Next start the dev server
 ```
 npm start
-
-// first this will do a full build then it will start the dev server
-// if it is done you can open the [http://localhost:3001/app](http://localhost:3001/app) in your browser
 ```
+This will do a full build then it will start the dev server. After it is done you can open the [http://localhost:3001/app](http://localhost:3001/app) in your favourite browser
 
 ### Development
 
