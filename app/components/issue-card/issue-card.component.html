@@ -1,13 +1,12 @@
-<div id="issue-card-container-{{::$ctrl.issue.id}}">
-  <p>Issue Card</p>
-  <p>
-    {{::$ctrl.issue.number}}
-    {{::$ctrl.issue.title}}
-    {{::$ctrl.issue.htmlUrl}}
-    {{::$ctrl.issue.userLogin}}
-    {{::$ctrl.issue.labels}}
-    {{::$ctrl.issue.state}}
-    {{::$ctrl.issue.comments}}
-    {{::$ctrl.issue.createdAt}}
-  </p>
-</div>
+<md-list-item
+    id="issue-card-container-{{::$ctrl.issue.id}}"
+    class="issue-card-container md-2-line" >
+
+  <div class="md-list-item-text" layout="column" >
+    <a ng-href="{{::$ctrl.issue.htmlUrl}}" target="_blank">
+      <h4>{{::$ctrl.issue.title}} [{{::$ctrl.issue.state}}]</h4>
+    </a>
+    <p>Opened by {{::$ctrl.issue.userLogin}} at {{::$ctrl.issue.createdAt}}</p>
+    <p class="md-secondary md-body-1">#{{::$ctrl.issue.number}}</p>
+  </div>
+</md-list-item>
