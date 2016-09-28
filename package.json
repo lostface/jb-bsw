@@ -4,7 +4,7 @@
   "scripts": {
     "watch": "webpack --progress --colors --watch",
     "build": "webpack --progress --colors",
-    "start": "http-server -p 3001",
+    "start": "npm run build && http-server -p 3001",
     "lint": "eslint . --ext .js --cache",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
