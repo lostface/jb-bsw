@@ -6,7 +6,7 @@
     <a ng-href="{{::$ctrl.issue.htmlUrl}}" target="_blank">
       <h4>{{::$ctrl.issue.title}} [{{::$ctrl.issue.state}}]</h4>
     </a>
-    <p>Opened by {{::$ctrl.issue.userLogin}} at {{::$ctrl.issue.createdAt}}</p>
+    <p>Opened by {{::$ctrl.issue.userLogin}} at {{::$ctrl.issue.createdAt | date}}</p>
     <p class="md-secondary md-body-1">#{{::$ctrl.issue.number}}</p>
   </div>
 </md-list-item>
