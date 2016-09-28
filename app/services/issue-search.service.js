@@ -12,7 +12,7 @@ export default class IssueSearchService {
   search(query) {
     const { $http } = this;
     return $http.get(URL_SEARCH_ISSUES, {
-      params: { q: query },
+      params: { q: `${query} type:issue` },
     })
       .then(response => response.data)
       .then(data => data.items)
