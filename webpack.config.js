@@ -5,7 +5,7 @@ const outdir = './dist';
 module.exports = {
   entry: {
     app: './app/bootstrap.js',
-    libs: ['angular', 'angular-animate', 'angular-aria', 'angular-material', 'ramda'],
+    libs: ['angular', 'angular-animate', 'angular-aria', 'angular-material', 'chart.js', 'ramda'],
   },
 
   output: {
