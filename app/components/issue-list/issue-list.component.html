@@ -1,5 +1,5 @@
-<div id="issue-list-container">
-  <h4>Issues of {{::$ctrl.repoFullName}}</h4>
+<div id="issue-list-container" class="issue-list-container">
+  <h4>Issues</h4>
   <md-list id="issue-list" >
     <issue-card
       ng-repeat="issue in $ctrl.issues track by issue.id"
