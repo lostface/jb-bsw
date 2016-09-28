@@ -11,6 +11,7 @@ class AppController {
   }
 
   $onInit() {
+    this.loading = false;
     this.repositories = [];
     this.resetSelectedProps();
 
@@ -38,11 +39,15 @@ class AppController {
     };
 
     const resetSelectedProps = () => this.resetSelectedProps();
+    const setLoadingFalse = () => { this.loading = false; };
 
+    // TODO general load indicator solution eg http interceptor
+    this.loading = true;
     this.repositorySearchService.search(query)
       .then(setRepositores)
       .catch(handleError)
-      .finally(resetSelectedProps);
+      .finally(resetSelectedProps)
+      .finally(setLoadingFalse);
   }
 
   searchIssuesByRepoFullName(repoFullName) {
@@ -56,9 +61,14 @@ class AppController {
       setSelectedRepoIssues([]);
     };
 
+    const setLoadingFalse = () => { this.loading = false; };
+
+    // TODO general load indicator solution eg http interceptor
+    this.loading = true;
     this.issueSearchService.searchByRepoFullName(repoFullName)
       .then(setSelectedRepoIssues)
-      .catch(handleError);
+      .catch(handleError)
+      .finally(setLoadingFalse);
   }
 
   handleOnRepositoryClick(repositoryId) {

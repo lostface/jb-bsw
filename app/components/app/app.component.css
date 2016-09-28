@@ -4,3 +4,10 @@
   margin-left: 16px;
   margin-right: 0;
 }
+
+.app-container md-progress-circular {
+  position: relative;
+  display: inline;
+  top: 13px;
+  left: 500px;
+}

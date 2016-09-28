@@ -8,6 +8,12 @@
   </md-toolbar>
 
   <md-content flex="">
+    <md-progress-circular
+      ng-show="$ctrl.loading"
+      md-mode="indeterminate"
+      md-diameter="30"
+    ></md-progress-circular>
+
     <search-panel
       on-search-trigger="$ctrl.searchRepositories(query)"
       on-clear-button-click="$ctrl.searchRepositories('')"></search-panel>
