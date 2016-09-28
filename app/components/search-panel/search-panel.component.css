@@ -1,0 +1,10 @@
+.search-panel-container > p {
+  display: inline;
+  margin-right: 16px;
+}
+
+md-input-container {
+  top: 11px;
+  margin-top: 0;
+  margin-bottom: 0;
+}

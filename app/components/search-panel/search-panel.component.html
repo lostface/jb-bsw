@@ -1,18 +1,25 @@
-<div id="search-panel-container">
-  <p>Search</p>
+<div id="search-panel-container" class="search-panel-container" >
+  <p class="md-title">Search</p>
 
-  <input
-    id="search-query"
-    type="text"
-    ng-model="$ctrl.query"
-    ng-keydown="$ctrl.handleOnSearchQueryKeydown($event)"
-    placeholder="repository"
-    maxlength="60" />
+  <md-input-container class="md-body-1" md-no-float="">
+    <input
+      id="search-query"
+      type="text"
+      ng-model="$ctrl.query"
+      ng-keydown="$ctrl.handleOnSearchQueryKeydown($event)"
+      placeholder="repository"
+      maxlength="60" />
+  </md-input-container>
 
-  <button id="search-button" ng-click="$ctrl.triggerSearch()">Search</button>
+  <md-button
+    id="search-button"
+    class="md-primary"
+    ng-click="$ctrl.triggerSearch()"
+  >Search</md-button>
 
-  <button
+  <md-button
     id="clear-button"
     ng-click="$ctrl.handleOnClearButtonClick()"
-    ng-disabled="$ctrl.isQueryEmpty()">Clear</button>
+    ng-disabled="$ctrl.isQueryEmpty()"
+  >Clear</md-button>
 </div>
