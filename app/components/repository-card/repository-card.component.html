@@ -1,16 +1,15 @@
-<div
+<md-list-item
     id="repository-card-container-{{::$ctrl.repository.id}}"
+    class="repository-card-container md-2-line"
     ng-click="$ctrl.handleOnClick()" >
-  <p>Repo Card</p>
-  <p>
-    {{::$ctrl.repository.name}}
-    {{::$ctrl.repository.fullName}}
-    {{::$ctrl.repository.htmlUrl}}
-    {{::$ctrl.repository.description}}
-    {{::$ctrl.repository.stargazersCount}}
-    {{::$ctrl.repository.watchersCount}}
-    {{::$ctrl.repository.language}}
-    {{::$ctrl.repository.forksCount}}
-    {{::$ctrl.repository.openIssuesCount}}
-  </p>
-</div>
+
+  <div class="md-list-item-text" layout="column" >
+    <a ng-href="{{::$ctrl.repository.htmlUrl}}" target="_blank">
+      <h4>{{::$ctrl.repository.fullName}}</h4>
+    </a>
+    <p>{{::$ctrl.repository.description}}</p>
+    <p class="md-secondary md-body-1">{{::$ctrl.repository.language}}</p>
+    <p class="md-secondary md-body-1">Stars({{::$ctrl.repository.stargazersCount}})</p>
+    <p class="md-secondary md-body-1">Forks({{::$ctrl.repository.forksCount}})</p>
+  </div>
+</md-list-item>
