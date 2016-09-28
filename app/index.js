@@ -9,7 +9,7 @@ import RepositoryCardComponent from './components/repository-card/repository-car
 import RepositoryListComponent from './components/repository-list/repository-list.component';
 import SearchPanelComponent from './components/search-panel/search-panel.component';
 
-export default angular.module('app', [])
+export default angular.module('app', ['ngMaterial'])
   .service('issueSearchService', IssueSearchService)
   .service('repositorySearchService', RepositorySearchService)
   .component('app', AppComponent)
