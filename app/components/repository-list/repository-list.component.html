@@ -1,12 +1,10 @@
 <div id="repository-list-container">
-  <p>Repo List</p>
-
-  <ul id="repository-list">
-    <li ng-repeat="repository in $ctrl.repositories track by repository.id" >
-      <repository-card
-        repository=repository
-        on-click="$ctrl.onRepositoryClick({ repositoryId })"
-      ></repository-card>
-    </li>
-  </ul>
+  <h4>Repositories</h4>
+  <md-list id="repository-list" >
+    <repository-card
+      ng-repeat="repository in $ctrl.repositories track by repository.id"
+      repository="repository"
+      on-click="$ctrl.onRepositoryClick({ repositoryId })"
+    ></repository-card>
+  </md-list>
 </div>
