@@ -98,6 +98,7 @@ class AppController {
           </md-toolbar>
 
           <md-dialog-content style="margin-left: 16px">
+            <repository-chart repository="$ctrl.repository"></repository-chart>
             <issue-list issues="$ctrl.repositoryIssues"></issue-list>
           </md-dialog-content>
 

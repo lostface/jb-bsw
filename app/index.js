@@ -7,6 +7,7 @@ import IssueCardComponent from './components/issue-card/issue-card.component';
 import IssueListComponent from './components/issue-list/issue-list.component';
 import RepositoryCardComponent from './components/repository-card/repository-card.component';
 import RepositoryListComponent from './components/repository-list/repository-list.component';
+import RepositoryChartComponent from './components/repository-chart/repository-chart.component';
 import SearchPanelComponent from './components/search-panel/search-panel.component';
 
 export default angular.module('app', ['ngMaterial'])
@@ -18,10 +19,5 @@ export default angular.module('app', ['ngMaterial'])
   .component('issueList', IssueListComponent)
   .component('repositoryCard', RepositoryCardComponent)
   .component('repositoryList', RepositoryListComponent)
-  .component('searchPanel', SearchPanelComponent)
-  .config(function($mdThemingProvider) {
-    'ngInject';
-    $mdThemingProvider.theme('default')
-      // .primaryPalette('pink')
-      // .accentPalette('orange');
-  });
+  .component('repositoryChart', RepositoryChartComponent)
+  .component('searchPanel', SearchPanelComponent);
