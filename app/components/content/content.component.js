@@ -4,8 +4,6 @@ export default {
   template,
   bindings: {
     repositories: '<',
-    selectedRepo: '<',
-    selectedRepoIssues: '<',
     onRepositoryClick: '&',
   },
 };
