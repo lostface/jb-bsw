@@ -1,13 +1,21 @@
-<div id="app-container">
-  <p>App</p>
+<div id="app-container" class="app-container" layout="column" style="height: 100%" >
+  <md-toolbar>
+    <div class="md-toolbar-tools" md-scroll-shrink="">
+      <h2>
+        <span>Github Repo Search</span>
+      </h2>
+    </div>
+  </md-toolbar>
 
-  <search-panel
-    on-search-trigger="$ctrl.searchRepositories(query)"
-    on-clear-button-click="$ctrl.searchRepositories('')"></search-panel>
+  <md-content flex="">
+    <search-panel
+      on-search-trigger="$ctrl.searchRepositories(query)"
+      on-clear-button-click="$ctrl.searchRepositories('')"></search-panel>
 
-  <content
-    repositories="$ctrl.repositories"
-    selected-repo="$ctrl.selectedRepo"
-    selected-repo-issues="$ctrl.selectedRepoIssues"
-    on-repository-click="$ctrl.handleOnRepositoryClick(repositoryId)"></content>
+    <content
+      repositories="$ctrl.repositories"
+      selected-repo="$ctrl.selectedRepo"
+      selected-repo-issues="$ctrl.selectedRepoIssues"
+      on-repository-click="$ctrl.handleOnRepositoryClick(repositoryId)"></content>
+    </md-content>
 </div>
