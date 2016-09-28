@@ -1,10 +1,9 @@
 <div id="issue-list-container">
-  <p>Issue List</p>
-  <p>Repo {{$ctrl.repoFullName}}</p>
-
-  <ul id="issue-list">
-    <li ng-repeat="issue in $ctrl.issues track by issue.id" >
-      <issue-card issue="issue"></issue-card>
-    </li>
-  </ul>
+  <h4>Issues of {{::$ctrl.repoFullName}}</h4>
+  <md-list id="issue-list" >
+    <issue-card
+      ng-repeat="issue in $ctrl.issues track by issue.id"
+      issue="issue"
+    ></issue-card>
+  </md-list>
 </div>

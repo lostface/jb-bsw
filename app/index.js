@@ -18,4 +18,10 @@ export default angular.module('app', ['ngMaterial'])
   .component('issueList', IssueListComponent)
   .component('repositoryCard', RepositoryCardComponent)
   .component('repositoryList', RepositoryListComponent)
-  .component('searchPanel', SearchPanelComponent);
+  .component('searchPanel', SearchPanelComponent)
+  .config(function($mdThemingProvider) {
+    'ngInject';
+    $mdThemingProvider.theme('default')
+      // .primaryPalette('pink')
+      // .accentPalette('orange');
+  });
